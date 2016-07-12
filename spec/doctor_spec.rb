@@ -32,4 +32,12 @@ describe ('Doctor') do
       expect(Doctor.all()).to(eq([]))
     end
   end
+
+  describe('#id') do
+    it('returns ID of a doctor in the office') do
+      test_doctor = Doctor.new({:name => "Patch Adams"})
+      expect(test_doctor.id()).to(eq(1))
+    end
+  end
+
 end
