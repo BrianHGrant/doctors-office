@@ -38,17 +38,6 @@ describe("Specialty") do
     end
   end
 
-  describe(".clear") do
-    it("empties the array of stored specialties") do
-      test_specialty1 = Specialty.new({:name => "Optmologist", :id => "1"})
-      test_specialty1.save()
-      test_specialty2 = Specialty.new({:name => "Optmologist", :id => "1"})
-      test_specialty2.save()
-      Specialty.clear()
-      expect(Specialty.all()).to(eq([]))
-    end
-  end
-
   describe(".find") do
     it("find a specialty by its ID") do
       test_specialty = Specialty.new({:name => "Optmologist", :id => "1"})
