@@ -1,0 +1,8 @@
+<h2>Choose your specialty:</h2>
+<ul>
+  <% @specialties.each do |specialty|   %>
+    <li><a href="/specialties/<%= specialty.id() %>"><%= specialty.name() %></a>
+  <% end %>
+</ul>
+
+<a href="/specialties/new">Add a new Specialty</a>

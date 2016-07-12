@@ -1,0 +1,8 @@
+<h2>Add a Doctor</h2>
+
+<form action="/specialties/:id/doctors" method="post">
+  <input type="hidden" name="specialty_id" value="<%= @specialty.id() %>">
+  <label for="name">Doctor Name:</label>
+  <input type="text" id="name" name="name">
+  <button type="submit">Add Doctor</button>
+</form>

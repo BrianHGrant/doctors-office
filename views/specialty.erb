@@ -1,0 +1,16 @@
+<h2>Doctors of <%= @specialty %>:</h2>
+
+<% if @doctors.any?() %>
+  <ul>
+    <% @doctors.each() do |doctor| %>
+      <li><a href="/doctors/<%= doctor.id() %>"><%= doctor.name() %></a></li>
+    <% end %>
+  </ul>
+
+<% else %>
+
+  <p>There are no doctors in this specialty</p>
+
+<% end %>
+
+<a href="/specialties/<%= @specialty.id() %>/doctors/new">Add a Doctor</a>
